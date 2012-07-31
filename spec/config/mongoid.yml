@@ -1,0 +1,21 @@
+test:
+  sessions:
+    default:
+      database: <%= ENV['MONGODB_TEST_DB'] %>
+      hosts:
+        - <%= ENV['MONGODB_TEST_HOST'] %>:27017
+      username: <%= ENV['MONGODB_TEST_USERNAME'] %>
+      password: <%= ENV['MONGODB_TEST_PASSWORD'] %>
+      options:
+        safe: true
+  options:
+    use_activesupport_time_zone: true
+    preload_models: false
+    use_utc: true
+    skip_version_check: false
+    allow_dynamic_fields: true
+    identity_map_enabled: false
+    include_root_in_json: false
+    raise_not_found_error: false
+    scope_overwrite_exception: true
+    include_type_for_serialization: true

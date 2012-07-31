@@ -1,0 +1,11 @@
+rvm:
+  - 1.9.3
+  - jruby
+
+notifications:
+  recipients:
+    - jordon@envygeeks.com
+
+branches:
+  only:
+    - master
