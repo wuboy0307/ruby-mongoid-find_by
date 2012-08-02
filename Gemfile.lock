@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/envygeeks/awesome_print.git
+  revision: ebadb11902ac3ffca0bc9cc6865f4dc249bfd21c
+  specs:
+    awesome_print (1.0.2)
+
 PATH
   remote: .
   specs:
@@ -68,6 +74,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print!
   guard-rspec
   mongoid-find_by!
   pry

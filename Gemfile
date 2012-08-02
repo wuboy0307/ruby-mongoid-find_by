@@ -6,4 +6,5 @@ group :development do
   gem 'simplecov'
   gem 'pry'
   gem 'guard-rspec'
+  gem 'awesome_print', github: 'envygeeks/awesome_print'
 end
