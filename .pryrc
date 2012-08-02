@@ -5,4 +5,4 @@ Pry::Commands.block_command 'clear' do
 end
 
 Bundler.require(:default, :development)
-Pry.print = proc { |out, value| out.puts value.ai }
+#Pry.print = proc { |out, value| out.puts value.ai }

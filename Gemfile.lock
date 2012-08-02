@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mongoid-find_by (0.1)
+    mongoid-find_by (0.2)
       mongoid
 
 GEM
