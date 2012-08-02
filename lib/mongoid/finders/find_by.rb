@@ -1,5 +1,4 @@
 require 'mongoid'
-require 'pry'
 
 module Mongoid::Finders::FindBy
   extend ActiveSupport::Concern
