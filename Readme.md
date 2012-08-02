@@ -1,4 +1,5 @@
 Add ActiveRecord style find_by and find_all_by to your Mongoid.
+[![Build Status](https://secure.travis-ci.org/envygeeks/mongoid-find_by.png?branch=master)](http://travis-ci.org/envygeeks/mongoid-find_by) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/envygeeks/mongoid-find_by)
 
 ---
 From your Gemfile:
