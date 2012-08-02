@@ -4,7 +4,7 @@ $:.unshift(File.expand_path('../', __FILE__))
 unless ENV['COVERAGE'] == false
   begin
     require 'simplecov' and SimpleCov.start
-  rescue => error
+  rescue Exception, LoadError => error
     nil
   end
 end
