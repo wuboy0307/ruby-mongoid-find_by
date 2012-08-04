@@ -1,11 +1,9 @@
 test:
   sessions:
     default:
-      database: <%= ENV['MONGODB_TEST_DB'] %>
+      database: mongoid-find_by-test
       hosts:
-        - <%= ENV['MONGODB_TEST_HOST'] %>:27017
-      username: <%= ENV['MONGODB_TEST_USERNAME'] %>
-      password: <%= ENV['MONGODB_TEST_PASSWORD'] %>
+        - 127.0.0.1:27017
       options:
         safe: true
   options:
@@ -24,7 +22,7 @@ benchmark:
     default:
       database: fuck-this_noise
       hosts:
-        - local.envygeeks.com:27017
+        - 127.0.0.1:27017
       options:
         safe: true
   options:

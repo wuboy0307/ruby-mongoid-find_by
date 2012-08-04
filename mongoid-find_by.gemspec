@@ -2,7 +2,7 @@ Gem::Specification.new do |spec|
   spec.license = 'MIT'
   spec.name = 'mongoid-find_by'
   spec.has_rdoc = false
-  spec.version = 0.2
+  spec.version = 0.3
   spec.require_paths = ['lib']
   spec.add_runtime_dependency('mongoid')
   spec.add_development_dependency('rspec')
