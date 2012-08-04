@@ -14,6 +14,6 @@ Gem::Specification.new do |spec|
   spec.summary = 'Add ActiveRecord like find_by and find_all_by to Mongoid.'
   spec.description = 'Add ActiveRecord like find_by and find_all_by to your Mongoid install.'
   spec.files = Dir.glob('lib/**/*') + Dir.glob('spec/**/*')
-  spec.files+= %w(Readme License Rakefile Gemfile)
+  spec.files+= %w(Readme.md License Rakefile Gemfile)
   spec.required_ruby_version = '>= 1.9.3'
 end
