@@ -2,7 +2,7 @@ require 'mongoid'
 
 module Mongoid::Finders::FindBy
   extend ActiveSupport::Concern
-  VERSION = 0.2
+  VERSION = 0.3
 
   included do
     class << self
