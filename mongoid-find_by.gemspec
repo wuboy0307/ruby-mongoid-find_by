@@ -7,9 +7,10 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency('mongoid')
   spec.add_development_dependency('rspec')
   spec.add_development_dependency('rake')
+  spec.add_development_dependency("simplecov")
   spec.add_development_dependency('shoulda-matchers')
   spec.authors = 'Jordon Bedwell'
-  spec.email = 'jordon@envygeeks.com'
+  spec.email = 'envygeeks@gmail.com'
   spec.homepage = 'https://github.com/envygeeks/mongoid-find_by'
   spec.summary = 'Add ActiveRecord like find_by and find_all_by to Mongoid.'
   spec.description = 'Add ActiveRecord like find_by and find_all_by to your Mongoid install.'
