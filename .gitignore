@@ -1,4 +1,5 @@
-coverage/
-pkg/
-vendor/gems
+/coverage/
+/pkg/
+/vendor/gems
 /benchmark
+/.bundle
