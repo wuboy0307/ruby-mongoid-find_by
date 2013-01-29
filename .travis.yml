@@ -5,7 +5,7 @@ rvm:
 
 notifications:
   recipients:
-    - jordon@envygeeks.com
+    - envygeeks@gmail.com
 
 branches:
   only:
