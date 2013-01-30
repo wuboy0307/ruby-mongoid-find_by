@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = "Jordon Bedwell"
   spec.email = "envygeeks@gmail.com"
   spec.add_runtime_dependency("mongoid")
+  spec.add_development_dependency("rake")
   spec.add_development_dependency("rspec")
   spec.add_development_dependency("shoulda-matchers")
   spec.summary = "Add ActiveRecord like finders to Mongoid."
