@@ -17,22 +17,3 @@ test:
     raise_not_found_error: false
     scope_overwrite_exception: true
     include_type_for_serialization: true
-benchmark:
-  sessions:
-    default:
-      database: fuck-this_noise
-      hosts:
-        - 127.0.0.1:27017
-      options:
-        safe: true
-  options:
-    use_activesupport_time_zone: true
-    preload_models: false
-    use_utc: true
-    skip_version_check: false
-    allow_dynamic_fields: true
-    identity_map_enabled: false
-    include_root_in_json: false
-    raise_not_found_error: false
-    scope_overwrite_exception: true
-    include_type_for_serialization: true
