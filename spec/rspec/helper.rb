@@ -1,5 +1,5 @@
 ENV["RAILS_ENV"], ENV["RACK_ENV"] = "test", "test"
-$:.unshift(File.expand_path("../", __FILE__))
+$:.unshift(File.expand_path("../../", __FILE__))
 
 if ENV["COVERAGE"] == true
   require "simplecov"
@@ -8,7 +8,7 @@ end
 
 require "mongoid/finders/find_by"
 
-Mongoid.load!(File.expand_path("../config/mongoid.yml", __FILE__), :test)
+Mongoid.load!(File.expand_path("../../config/mongoid.yml", __FILE__), :test)
 module Mongoid::SpecHelpers
   class << self
     def random_class
