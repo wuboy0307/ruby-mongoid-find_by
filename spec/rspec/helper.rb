@@ -1,17 +1,14 @@
-ENV['RAILS_ENV'], ENV['RACK_ENV'] = 'test', 'test'
-$:.unshift(File.expand_path('../', __FILE__))
+ENV["RAILS_ENV"], ENV["RACK_ENV"] = "test", "test"
+$:.unshift(File.expand_path("../", __FILE__))
 
-unless ENV['COVERAGE'] == false
-  begin
-    require 'simplecov' and SimpleCov.start
-  rescue Exception, LoadError => error
-    nil
-  end
+if ENV["COVERAGE"] == true
+  require "simplecov"
+  SimpleCov.start
 end
 
-require 'mongoid/finders/find_by'
-Mongoid.load!(File.expand_path('../config/mongoid.yml', __FILE__), :test)
+require "mongoid/finders/find_by"
 
+Mongoid.load!(File.expand_path("../config/mongoid.yml", __FILE__), :test)
 module Mongoid::SpecHelpers
   class << self
     def random_class
@@ -24,7 +21,7 @@ module Mongoid::SpecHelpers
   end
 end
 
-if ENV['CI']
+if ENV["CI"]
   Mongoid.configure do |config|
     config.connect_to("travis-#{Process.pid}")
   end
@@ -42,7 +39,6 @@ module FindBy
   end
 end
 
-Dir[File.join('../spec/{matchers,support}/**/*.rb', __FILE__)].each { |file| require file }
 RSpec.configure do |config|
   config.before(:each) do
     Mongoid.purge!
