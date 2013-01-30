@@ -1,4 +1,4 @@
-require 'mongoid'
+require "mongoid"
 
 module Mongoid::Finders::FindBy
   extend ActiveSupport::Concern
@@ -31,4 +31,5 @@ module Mongoid::Finders::FindBy
   end
 end
 
+# Deprecation warning, this will become explicit soon.....
 Mongoid::Document.send(:include, Mongoid::Finders::FindBy)
