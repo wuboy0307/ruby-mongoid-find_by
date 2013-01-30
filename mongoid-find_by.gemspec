@@ -1,5 +1,5 @@
 $:.unshift(File.expand_path('../lib', __FILE__))
-require "mongoid-find_by"
+require "mongoid/finders/find_by/version"
 
 Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/envygeeks/mongoid-find_by"
