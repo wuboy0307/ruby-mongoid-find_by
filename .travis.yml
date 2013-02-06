@@ -1,6 +1,6 @@
 services: mongodb
 rvm:
-  - rbx19
+  - rbx-19mode
   - 1.9.3
   - jruby-19mode
 
