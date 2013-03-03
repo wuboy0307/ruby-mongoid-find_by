@@ -11,7 +11,6 @@ Gem::Specification.new do |s|
   s.email = "envygeeks@gmail.com"
   s.version = Mongoid::Finders::FindBy::VERSION
   s.add_runtime_dependency("mongoid", "~> 3.1.2")
-  s.add_development_dependency("rake", "~> 10.0.3")
   s.add_development_dependency("rspec", "~> 2.12")
   s.description = "Add ActiveRecord like finders to your Mongoid install."
   s.files = %w(Readme.md MIT-License Rakefile Gemfile) + Dir.glob("lib/**/*")
