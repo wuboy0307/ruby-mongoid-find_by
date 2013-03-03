@@ -1,7 +1,7 @@
 module Mongoid
   module Finders
     module FindBy
-      VERSION = 0.4
+      VERSION = 1.0.0
     end
   end
 end
