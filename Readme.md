@@ -1,12 +1,14 @@
-Add ActiveRecord style find_by and find_all_by to your Mongoid.
+# Mongoid-Find_By
 
-[![Build Status](https://secure.travis-ci.org/envygeeks/mongoid-find_by.png?branch=master)](http://travis-ci.org/envygeeks/mongoid-find_by) [![Code Climate](https://codeclimate.com/github/envygeeks/mongoid-find_by.png)](https://codeclimate.com/github/envygeeks/mongoid-find_by)
+[![Build Status](https://travis-ci.org/envygeeks/mongoid-find_by.png?branch=master)](https://travis-ci.org/envygeeks/mongoid-find_by) [![Coverage Status](https://coveralls.io/repos/envygeeks/mongoid-find_by/badge.png?branch=master)](https://coveralls.io/r/envygeeks/mongoid-find_by) [![Code Climate](https://codeclimate.com/github/envygeeks/mongoid-find_by.png)](https://codeclimate.com/github/envygeeks/mongoid-find_by)
+
+Add ActiveRecord style find_by and find_all_by to your Mongoid.
 
 ---
 From your Gemfile:
 
 ```ruby
-gem('mongoid-find_by')
+gem "mongoid-find_by"
 ```
 
 ---
