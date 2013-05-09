@@ -2,6 +2,7 @@ require "mongoid"
 
 module Mongoid::Finders::FindBy
   extend ActiveSupport::Concern
+
   included do
     class << self
       def method_missing(meth, *args)
