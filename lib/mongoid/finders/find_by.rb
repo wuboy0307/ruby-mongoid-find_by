@@ -17,8 +17,9 @@ module Mongoid::Finders::FindBy
           mongoid_meth = (mongoid_meth =~ /\Afind_all/ ? 'where' : 'find_by')
           singleton_class.class_eval <<-SOURCE
             def #{meth}(#{attrs.join(', ')})
-              #{mongoid_meth}(#{attrs.inject([])
-                { |obj, attr| obj << "#{attr}: #{attr}" }.join(', ')})
+              #{mongoid_meth}(#{attrs.inject([]) { |obj, attr|
+                obj << "#{attr}: #{attr}"
+              }.join(', ')})
             end
           SOURCE
 
