@@ -13,21 +13,19 @@ describe Mongoid::Finders::FindBy do
   end
 
   let :cmodel do
-    Object.send(:const_set,
-      obj = Mongoid::SpecHelpers.random_class, Class.new(FindByModel))
+    Object.send(:const_set, obj = Mongoid::SpecHelpers.random_class, Class.new(FindByModel))
     obj = Object.const_get(obj)
-
     obj.create!(hello: "world", world: "hello")
     obj.create!(hello: "world", world: "hello")
 
     obj
   end
 
-  it "should raise NoMethodError if the method doesn't start with find_by" do
+  it "raises NoMethodError if the method doesn't start with find_by" do
     expect { FindByModel.hello_world }.to raise_error NoMethodError
   end
 
-  it "should accept find_all_by" do
+  it "accepts find_all_by" do
     output = cmodel.find_all_by_hello("world")
     expect(output.count).to eq 2
     output.each do |v|
@@ -35,7 +33,7 @@ describe Mongoid::Finders::FindBy do
     end
   end
 
-  it "should accept multiple fields on find_all_by" do
+  it "accepts multiple fields on find_all_by" do
     output = cmodel.find_all_by_hello_and_world("world", "hello")
     expect(output.count).to eq 2
     output.each do |v|
@@ -43,16 +41,16 @@ describe Mongoid::Finders::FindBy do
     end
   end
 
-  it "should accept multiple fields on find_by" do
+  it "accepts multiple fields on find_by" do
     expect(cmodel.find_by_hello_and_world(
       "world", "hello")).to be_kind_of FindByModel
   end
 
-  it "should accept find_by" do
+  it "accepts find_by" do
     expect(cmodel.find_by_hello("world")).to be_kind_of FindByModel
   end
 
-  it "should raise NoMethodError if the field doesn't exist" do
+  it "raises NoMethodError if the field doesn't exist" do
     expect { cmodel.find_by_unknown("value") }.to raise_error NoMethodError
   end
 end
