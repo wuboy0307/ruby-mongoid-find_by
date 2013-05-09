@@ -53,4 +53,9 @@ describe Mongoid::Finders::FindBy do
   it "raises NoMethodError if the field doesn't exist" do
     expect { cmodel.find_by_unknown("value") }.to raise_error NoMethodError
   end
+
+  it "caches finder on the class" do
+    cmodel.find_by_hello("world")
+    expect(cmodel).to respond_to :find_by_hello
+  end
 end
