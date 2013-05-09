@@ -15,6 +15,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("simplecov")
   spec.version = Mongoid::Finders::FindBy::VERSION
   spec.add_runtime_dependency("mongoid", "~> 3.1.2")
+  spec.files = %w(Readme.md License Rakefile Gemfile) + Dir.glob("lib/**/*")
   spec.description = "Add ActiveRecord like finders to your Mongoid install."
-  spec.files = %w(Readme.md MIT-License Rakefile Gemfile) + Dir.glob("lib/**/*")
 end
