@@ -29,5 +29,4 @@ module Mongoid::Finders::FindBy
   end
 end
 
-# Deprecation warning, this will become explicit soon.....
 Mongoid::Document.send(:include, Mongoid::Finders::FindBy)
