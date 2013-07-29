@@ -6,11 +6,11 @@ module Mongoid::Finders::FindBy
   included do
     class << self
       def cache_find_by_method(meth, finder, attrs)
-        singleton_class.class_eval <<-RUBY
+        singleton_class.class_eval <<-STR
           def #{meth}(#{attrs.join(",")})
             #{finder}(#{attrs.inject([]) { |o, a| o << ":#{a} => #{a}" }.join(",")})
           end
-        RUBY
+        STR
       end
 
       def method_missing(meth, *args)

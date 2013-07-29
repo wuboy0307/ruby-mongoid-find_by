@@ -1,9 +1,5 @@
-/Gemfile.lock
+/vendor/bundle
 /coverage
 /.bundle
-/.pryrc
-/.rvmrc
-/pkg
 /tmp
-/log
-/**/*.gem
+/Gemfile.lock
