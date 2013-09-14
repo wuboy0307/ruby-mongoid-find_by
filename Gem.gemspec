@@ -14,11 +14,9 @@ Gem::Specification.new do |spec|
   spec.files = %w(Readme.md License Rakefile Gemfile) + Dir.glob("lib/**/*")
   spec.description = "Add ActiveRecord like finders to your Mongoid install."
 
-  # --------------------------------------------------------------------------
-  # Dependencies.
-  # --------------------------------------------------------------------------
-
   spec.add_runtime_dependency("mongoid", "~> 3.1.4")
   spec.add_development_dependency("rspec", "~> 2.14")
-  spec.add_development_dependency("rspec-expect_error", "~> 0.0.2")
+  spec.add_development_dependency("rspec-expect_error", "~> 0.0")
+  spec.add_development_dependency("envygeeks-coveralls", "~> 0.1")
+  spec.add_development_dependency("luna-rspec-formatters", "~> 0.4")
 end
