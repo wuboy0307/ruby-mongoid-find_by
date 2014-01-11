@@ -10,3 +10,6 @@ notifications:
 branches:
   only:
     - master
+env:
+  - "MONGOID_VERSION=3.1.6"
+  - "MONGOID_VERSION=4.0.0.alpha2"
