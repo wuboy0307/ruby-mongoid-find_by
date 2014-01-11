@@ -10,7 +10,6 @@ Gem::Specification.new do |spec|
   spec.authors = "Jordon Bedwell"
   spec.email = "envygeeks@gmail.com"
   spec.version = Mongoid::Finders::FindBy::VERSION
-  spec.add_development_dependency("luna-rspec-formatters")
   spec.files = %w(Readme.md License Rakefile Gemfile) + Dir.glob("lib/**/*")
   spec.description = "Add ActiveRecord like finders to your Mongoid install."
 
