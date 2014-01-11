@@ -19,10 +19,27 @@ describe Mongoid::Finders::FindBy do
     obj
   end
 
-  it "raises NoMethodError if the method doesn't start with find_by" do
+  it "raises NoMethodError if the field doesn't exist" do
     expect_error NoMethodError do
-      FindByModel.hello_world
+      cmodel.find_by_unknown("value")
     end
+  end
+
+  context "without the method starting with find[_all]_by" do
+    it "passes to super" do
+      expect_error NoMethodError do
+        FindByModel.hello_world
+      end
+    end
+  end
+
+  it "caches the finder" do
+    cmodel.find_by_hello("world")
+    expect(cmodel).to respond_to :find_by_hello
+  end
+
+  it "accepts find_by" do
+    expect(cmodel.find_by_hello("world")).to be_kind_of FindByModel
   end
 
   it "accepts find_all_by" do
@@ -33,30 +50,18 @@ describe Mongoid::Finders::FindBy do
     end
   end
 
-  it "accepts multiple fields on find_all_by" do
-    output = cmodel.find_all_by_hello_and_world("world", "hello")
-    expect(output.count).to eq 2
-    output.each do |v|
-      expect(v).to be_kind_of FindByModel
+  context "multiple fields" do
+    it "accepts on find_all_by" do
+      output = cmodel.find_all_by_hello_and_world("world", "hello")
+      expect(output.count).to eq 2
+      output.each do |v|
+        expect(v).to be_kind_of FindByModel
+      end
     end
-  end
 
-  it "accepts multiple fields on find_by" do
-    expect(cmodel.find_by_hello_and_world("world", "hello")).to be_kind_of FindByModel
-  end
-
-  it "accepts find_by" do
-    expect(cmodel.find_by_hello("world")).to be_kind_of FindByModel
-  end
-
-  it "raises NoMethodError if the field doesn't exist" do
-    expect_error NoMethodError do
-      cmodel.find_by_unknown("value")
+    it "accepts on find_by" do
+      result = cmodel.find_by_hello_and_world("world", "hello")
+      expect(result).to be_kind_of FindByModel
     end
-  end
-
-  it "caches finder on the class" do
-    cmodel.find_by_hello("world")
-    expect(cmodel).to respond_to :find_by_hello
   end
 end
