@@ -7,8 +7,6 @@ describe Mongoid::Finders::FindBy do
 
       field :hello, type: String
       field :world, type: String
-
-      attr_accessible :hello, :world
     end
   end
 
