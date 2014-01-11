@@ -1,4 +1,3 @@
-ENV["RAILS_ENV"], ENV["RACK_ENV"] = "test", "test"
 require_relative "../support/simplecov"
 require "luna/rspec/formatters/checks"
 require "mongoid/finders/find_by"
