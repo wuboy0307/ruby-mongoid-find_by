@@ -20,16 +20,12 @@ describe Mongoid::Finders::FindBy do
   end
 
   it "raises NoMethodError if the field doesn't exist" do
-    expect_error NoMethodError do
-      cmodel.find_by_unknown("value")
-    end
+    expect { cmodel.find_by_unknown("value") }.to raise_error NoMethodError
   end
 
   context "without the method starting with find[_all]_by" do
     it "passes to super" do
-      expect_error NoMethodError do
-        FindByModel.hello_world
-      end
+      expect { FindByModel.hello_world }.to raise_error NoMethodError
     end
   end
 

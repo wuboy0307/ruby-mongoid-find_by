@@ -1,7 +1,6 @@
 require_relative "../support/simplecov"
 require "luna/rspec/formatters/checks"
 require "mongoid/finders/find_by"
-require "rspec/expect_error"
 
 Mongoid.load!(File.expand_path("../../config/mongoid.yml", __FILE__), :test)
 if ENV["CI"]
