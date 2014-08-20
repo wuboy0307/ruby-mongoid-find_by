@@ -6,10 +6,10 @@ rvm:
   - jruby
 notifications:
   recipients:
-    - envygeeks@gmail.com
+    - jordon@envygeeks.com
 branches:
   only:
     - master
 env:
   - "MONGOID_VERSION=3.1.6"
-  - "MONGOID_VERSION=4.0.0.alpha2"
+  - "MONGOID_VERSION=4.0.0"
