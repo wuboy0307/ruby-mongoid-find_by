@@ -29,4 +29,4 @@ module Mongoid::Findable::FindBy
   end
 end
 
-Mongoid::Document.send(:include, Mongoid::Finders::FindBy)
+Mongoid::Document.send(:include, Mongoid::Findable::FindBy)
