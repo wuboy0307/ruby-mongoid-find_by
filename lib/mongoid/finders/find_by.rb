@@ -1,6 +1,6 @@
 require "mongoid"
 
-module Mongoid::Finders::FindBy
+module Mongoid::Findable::FindBy
   extend ActiveSupport::Concern
 
   included do
