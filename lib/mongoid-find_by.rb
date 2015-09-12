@@ -1,1 +1,1 @@
-require "mongoid/finders/find_by"
+require "mongoid/findable/find_by"
